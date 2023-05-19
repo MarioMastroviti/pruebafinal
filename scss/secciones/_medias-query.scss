@@ -1,0 +1,144 @@
+//Animaciones con el mouse
+   
+@media screen and (min-width:1200px){
+        
+    header nav ul li:hover{
+     background-color: #c07a40;
+     transform: scale(0.9), ;
+    }
+
+    .boton-main:hover{
+     transform: scale(0.9);
+    
+    }
+
+    .img-footer:hover{
+     transform: scale(0.9);
+    }
+
+    .padre-hijo:hover{
+     box-shadow: 0.2rem 0.2rem 0.2rem black;
+    }
+
+
+   
+}
+ 
+
+@media screen and (max-width:768px) {
+     
+     //adaptacion index
+     
+     .bienvenida{
+    
+         padding: 1.5rem;
+         text-align: center;
+     }
+
+     .titulos{
+         height: auto;
+         display: flex;
+         flex-direction: column;
+         gap: 0.5rem;
+         
+     }
+
+     .titulos-hijo{
+         align-items: center;
+         text-align: center;
+        gap: 0.5rem;
+        justify-content: center;
+     }
+     
+ 
+     .beneficios-padre img{
+         width: auto;
+     }
+
+     .beneficios-hijos{
+         height: auto;
+         width: auto;
+     }
+
+ .beneficios-padre{
+ 
+     height: auto;
+     width: auto;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     align-items: center;
+    }
+
+    //adaptacion envios y pagos
+
+    .mapa{
+     width: 12rem;
+     height: 12rem;
+    }
+
+    .titulos-env{
+        display: none;
+    }
+ 
+
+ //adaptacion experiencias
+.experiencias{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    }
+    .exp{
+        text-align: center;
+       padding: 1rem;
+     }
+
+   
+
+ .row p{ 
+    height: auto;
+    width: auto;
+     }
+
+ 
+ //adaptacion footer
+
+ .pagos-footer{
+display: none;
+ }
+
+//estilo producto
+
+.img-producto{
+    width: 100%;
+}
+   
+ }
+ 
+ @media (min-width: 768px) and (max-width: 1199px) {
+
+    .beneficios-padre {
+      display: grid;
+      grid-template-columns: auto auto; 
+      height: auto;  
+    }
+
+    .pagos-footer{
+        display: none;
+    }
+     //adaptacion experiencias
+
+    
+     .experiencias{
+        display: flex;
+        flex-direction: column;
+    padding: 1rem; 
+     }
+
+     .exp{
+        text-align: center;
+        padding: 1rem;
+     
+     }
+    
+}

@@ -1,0 +1,90 @@
+ @import "../base/extend";
+ @import "../base/mixin";
+ @import "../base/variables";
+ 
+ // estilos del inicio
+
+
+  main{
+    background: linear-gradient($color-principal,#dbac86);
+}
+
+.bienvenida{
+     padding: 6.5rem;
+    text-align: center;
+    background-image: url(../img/imagen-fondo.jpg);
+    
+
+}
+
+.titulo-main{
+    font-size: 2.8rem;
+    gap: 20px;
+    color: rgb(255, 255, 255);
+   
+}
+
+.parrafo-main{
+    font-size: 2rem;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.boton-main{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 20px;
+    background: $color-principal;
+    border: 2px solid rgb(3, 3, 3);
+    color: white;
+    text-decoration: none;
+                   
+}
+
+
+
+.titulos{
+    display: block;
+    display: flex;
+    background: linear-gradient($color-principal, $color-secundario);
+    font-size: x-large;
+    @include medidas(100%, auto);
+
+}
+.titulos-hijo{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    justify-content: space-around;
+    
+}
+
+//estilos de los beneficios 
+
+.beneficios{
+background: linear-gradient($color-principal, $color-secundario);
+}
+
+.titulo-beneficios{
+font-size: xx-large;
+text-align: center;
+padding: 2rem;
+}
+
+.beneficios-padre{
+@include flex;
+@extend %cajas-padre;
+}
+
+.beneficios-hijos{
+
+   @extend %cajas-hijas;
+
+
+}
+

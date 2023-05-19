@@ -1,0 +1,39 @@
+
+//estilo de experiencias
+
+.row{ 
+    padding: 3rem;
+    font-size:larger;
+    }
+    .experiencias img{
+        width: 80%;
+    }
+
+    .experiencias{
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto ;
+        
+
+        grid-template-areas: 
+        "img img img"
+        "h3 h3 h3"
+        "p p p";
+    
+    
+  
+    main h3{
+        grid-area: h3;
+    }
+    
+    main img{
+        grid-area: img;
+    }
+    main p{
+        grid-area: p;
+    }
+    .exp{
+        padding: 1.5rem;
+    }
+   }

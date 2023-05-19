@@ -1,0 +1,35 @@
+//estilos del catalogo de productos
+
+.main-productos{
+  padding: 2rem;
+}
+.todos-productos{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+gap: 1rem;
+margin-top: 2rem;
+
+}
+.producto-imagen{
+max-width: 100%;
+border-radius: 1rem;
+}
+.producto-detalle{
+background-color: navajowhite;
+color: black;
+padding: 1rem;
+border-radius: 1rem;
+margin-top: -2rem;    
+position: relative;
+display: flex;
+flex-direction: column;
+gap: 0.25rem;
+}
+
+.producto-agregar{
+border: 0;
+background-color:beige ;
+border-radius: 1rem;
+cursor: pointer;
+text-transform: to-upper-case($string: "");
+}
