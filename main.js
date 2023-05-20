@@ -79,4 +79,7 @@ function agregarAlCarrito(e){
 
     window.localStorage.setItem("productos-en-el-carrito", JSON.stringify(productosEnCarrito));
 
+   
 }
+
+

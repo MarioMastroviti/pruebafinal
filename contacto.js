@@ -1,6 +1,7 @@
 
 //creacion de la clase ocupacion
 
+
 class Ocupacion {
   constructor(id, nombre) {
     this.id = id;
@@ -17,6 +18,7 @@ const ocupaciones = [
 
 let warnings = "";
 let listaOcupaciones = document.getElementById("ocupacion");
+
 const parrafo = document.getElementById("warnings")
 
 ocupaciones.forEach((unaOcupacion) => {
@@ -42,6 +44,12 @@ class Paciente {
 //Array pacientes
 let pacientes = [];
 
+formulario.addEventListener("submit", (event) => {
+  event.preventDefault();
+  validarFormulario(event.target);
+});
+
+
 //funcion validar formulario
 
 function validarFormulario(data) {
@@ -60,7 +68,7 @@ function validarFormulario(data) {
   const ocupacion = document.getElementById("ocupacion").value;
   const correo = document.getElementById("email").value;
   const consultaPaciente = document.getElementById("consulta").value;
-  
+
 
   // creacion de un paciente
   const unaOcupacion = ocupaciones.find((e) => e.id.toString() === ocupacion);
@@ -72,9 +80,19 @@ function validarFormulario(data) {
     consultaPaciente
   );
 
+ 
+
+
 
   // añadimos  un array de pacientes
   pacientes.push(unPaciente);
   localStorage.setItem("pacientes", JSON.stringify(pacientes));
-  
+  console.log(unPaciente);
+
+  swal.fire({
+    title: "Muchas gracias " + nombreApellidos + " por tu consulta, en breve nos comunicaremos con usted al e-mail " + correo 
+  });
+formulario.reset();
  }
+ 
+
