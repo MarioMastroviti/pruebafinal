@@ -1,0 +1,26 @@
+[
+    {
+        "id" : "01",
+        "titulo": "Aceite de thc",
+        "imagen":  "../img/aceite1.jpg",
+        "precio": 3000
+    },
+    {
+        "id" : "02",
+        "titulo": "Aceite de cbd",
+        "imagen":  "../img/aceite2.png",
+        "precio": 3000
+    },
+    {
+        "id" : "03",
+        "titulo": "Aceite de thc/cbd",
+        "imagen":  "../img/aceite3.png",
+        "precio": 3000
+    },
+    {
+        "id" : "04",
+        "titulo": "Aceite para mascotas",
+        "imagen":  "../img/aceite4.jpg",
+        "precio": 3000
+    }
+]

@@ -16,10 +16,10 @@ const ocupaciones = [
   
 ];
 
-let warnings = "";
+
 let listaOcupaciones = document.getElementById("ocupacion");
 
-const parrafo = document.getElementById("warnings")
+
 
 ocupaciones.forEach((unaOcupacion) => {
   let item = document.createElement("option");

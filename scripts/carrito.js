@@ -1,7 +1,6 @@
 const productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-el-carrito"));
 
 
-const carritoVacio = document.getElementById("carrito-vacio");
 const productosCarrito = document.getElementById("productos-carrito");
 const carritoFunciones = document.getElementById("carrito-funciones");
 const carritoCompro = document.getElementById("carrito-compro");
@@ -9,16 +8,13 @@ const botonVaciar = document.getElementById("carrito-vaciar");
 const campoTotal = document.getElementById("total");
 
 
-
 function cargarProductosAlCarrito(){
 
-if (productosEnCarrito) {
 
-    carritoVacio.classList.add("disable");
+if (productosEnCarrito && productosEnCarrito.length > 0) {
+
 productosCarrito.classList.remove("disable");
 carritoFunciones.classList.remove("disable");
-
-
 
 productosCarrito.innerHTML= "";
 
@@ -65,9 +61,13 @@ campoTotal.innerText = productosEnCarrito.reduce((acc , prod) => acc + producto.
 
 } else {
 
-carritoCompro.classList.add("disable");
-campoTotal.innerText = 0;
-   
+    carritoFunciones.classList.add("disable");
+    productosCarrito.classList.add("disable");
+    carritoCompro.classList.add("disable");
+    swal.fire({
+        title: "El carrito esta vacio"
+      });
+    
 }
 
 }
@@ -95,6 +95,7 @@ function carritoVaciar(){
     productosEnCarrito.length = 0;
     window.localStorage.setItem("productos-en-el-carrito", JSON.stringify(productosEnCarrito));
     cargarProductosAlCarrito();
-    campoTotal.innerHTML= 0;
+
    
 }
+
