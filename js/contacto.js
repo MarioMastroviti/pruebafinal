@@ -80,9 +80,6 @@ function validarFormulario(data) {
     consultaPaciente
   );
 
- 
-
-
 
   // añadimos  un array de pacientes
   pacientes.push(unPaciente);

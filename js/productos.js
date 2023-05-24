@@ -1,38 +1,19 @@
-//PRODUCTOS
-const productos = [
-    {
-        id: "01",
-        titulo: "Aceite de thc",
-        imagen:  "../img/aceite1.jpg",
-        precio: 3000
-    },
-    {
-        id: "02",
-        titulo: "Aceite de cbd",
-        imagen:  "../img/aceite2.png",
-        precio: 3000
-    },
-    {
-        id: "03",
-        titulo: "Aceite de thc/cbd",
-        imagen:  "../img/aceite3.png",
-        precio: 3000
-    },
-    {
-        id: "04",
-        titulo: "Aceite para mascotas",
-        imagen:  "../img/aceite4.jpg",
-        precio: 3000
-    }
-];
+let productos = [];
+
+fetch("../js/productos.json")
+    .then(response => response.json())
+    .then(data => {
+        productos = data;
+        cargarProductos(productos);
+    })
 
 const todosProductos = document.getElementById("todos-los-productos");
 let  botonAgregar = document.querySelectorAll(".producto-agregar");
 
 
-function cargarProductos(){
+function cargarProductos(productosElegidos){
 
-    productos.forEach(producto => {
+    productosElegidos.forEach(producto => {
         const div = document.createElement("div");
         div.classList.add("producto");
         div.innerHTML = `
@@ -45,17 +26,19 @@ function cargarProductos(){
         `;
         todosProductos.append(div);
     })
+    actualizarBotonAgregar();
     }
    
-cargarProductos();
 
 
-botonAgregar = document.querySelectorAll(".producto-agregar");
+    function actualizarBotonAgregar() {
+        botonAgregar = document.querySelectorAll(".producto-agregar");
+    
+        botonAgregar.forEach(boton => {
+            boton.addEventListener("click", agregarAlCarrito);
+        });
+    }
 
-
-botonAgregar.forEach(boton => {
-    boton.addEventListener("click" , agregarAlCarrito);
-});
 
 let productosEnCarrito;
 const productosEnCarritoLS = JSON.parse(localStorage.getItem("productos-en-el-carrito"));
